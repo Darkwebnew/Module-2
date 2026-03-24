@@ -1,0 +1,162 @@
+# Module 2
+
+---
+
+# Experiment 1: Built-in Functions - Binary Conversion Using Built-in Functions in Python
+
+## 🎯 Aim
+To write a Python program to convert the number **16** into its **binary representation** using built-in Python functions.
+
+## 🧠 Algorithm
+1. Assign the value `16` to a variable `a`.
+2. Use the built-in `bin()` function to convert the number to binary.
+3. Print the result.
+
+## 🧾 Program
+```python
+a=16 
+print(bin(a))
+```
+
+## Output
+<img width="697" height="319" alt="{47E9D9F4-09A3-40C0-A7E7-EE92FA819B10}" src="https://github.com/user-attachments/assets/c6ce7d32-2271-41a3-9bf0-0b084b2eda1e" />
+
+## Result
+Thus, the program has been successfully executed.
+
+---
+
+# Experiment 2: Functions in Python - Modulo Calculator
+
+## 🎯 Aim
+To write a Python program that defines a function which accepts two values and returns their **modulo** using the `%` operator.
+
+## 🧠 Algorithm
+1. Define a function called `result` that takes two arguments `a` and `b`.
+2. Inside the function, compute the modulo using `a % b`.
+3. Print the result of the modulo operation.
+4. Get two integer inputs from the user.
+5. Call the `result` function with the user-provided values.
+
+## 🧾 Program
+```python
+def result(a, b):
+    modulo_value = a % b
+    return modulo_value
+a=int(input())
+b=int(input())
+print("modulo is", result(a, b))
+```
+
+## Output
+<img width="826" height="383" alt="{852E2D69-0A98-43D3-AD2F-2EF6CBF129F5}" src="https://github.com/user-attachments/assets/1a37fdfc-656a-436a-8fe7-795e46527d40" />
+
+## Result
+The program to return two values modulo is successful.
+
+---
+
+# Experiment 3: Lambda Function in Python - Addition of Two Numbers
+
+## 🎯 Aim
+To write a Python program that defines a **lambda function** which takes two arguments `a` and `b`, and returns their sum.
+
+## 🧠 Algorithm
+1. Get two integer inputs from the user.
+2. Use a **lambda function** to define a function `f` that returns `a + b`.
+3. Call the function with the user inputs and print the result.
+
+## 🧾 Program
+```python
+a=int(input()) 
+b=int(input()) 
+f=lambda a,b: a+b 
+print(f(a,b))
+```
+
+## Output
+<img width="571" height="230" alt="image" src="https://github.com/user-attachments/assets/55537265-f703-483e-858a-d76b8189b2db" />
+
+## Result
+Thus, the program has been successfully executed.
+
+---
+
+# Experiment 4: Looping (Patterns) - Pascal's Triangle Generator in Python
+
+## 🎯 Aim
+To write a Python program that generates **Pascal's Triangle** using numbers. The number of rows is accepted from the user.
+
+## 🧠 Algorithm
+1. Start the program.
+2. Input the number of rows from the user.
+3. Loop from 0 to the number of rows.
+4. For each row:
+   - Print appropriate spaces to shape the triangle.
+   - Compute values using the formula:  
+     \[
+     C(n, k) = \frac{n!}{k!(n-k)!}
+     \]
+5. Print all rows of Pascal's Triangle.
+6. End the program.
+
+## 🧪 Program
+```python
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+def combination(n, k):
+    return factorial(n) // (factorial(k) * factorial(n - k))
+num_rows = int(input("Enter number of rows: "))
+for i in range(num_rows):
+    print(' ' * (num_rows - i - 1), end='')
+    for j in range(i + 1):
+        print(combination(i, j), end=' ')
+    print()
+```
+
+## Sample Output
+<img width="249" height="275" alt="image" src="https://github.com/user-attachments/assets/24dfbcd4-b891-44ce-8064-092f0c247262" />
+
+## Result
+Thus, the program has been successfully executed.
+
+---
+
+# Experiment 5: Loops in Python - Palindrome Number Checker
+
+## 🎯 Aim
+To write a Python program that checks whether a given number is a **palindrome** using loops.
+
+## 🧠 Algorithm
+1. Get input from the user and assign it to a variable `num`.
+2. Assign the value of `num` to a temporary variable `temp`.
+3. Initialize a variable `rev` to 0 (used to store the reversed number).
+4. Use a `while` loop to reverse the digits:
+   - While `temp > 0`:
+     - `rev = (10 * rev) + temp % 10`
+     - `temp = temp // 10`
+5. After the loop, compare `rev` with `num`:
+   - If equal, print that the number is a palindrome.
+   - Else, print that it is not a palindrome.
+
+## 🧾 Program
+```python
+num=int(input()) 
+rev=0 
+temp=num 
+while temp>0: 
+    rev=(10*rev)+temp%10 
+    temp//=10 
+    if rev==num: 
+        print("The given number {} is a Palindrome".format(num)) 
+    else: 
+        print("The given number {} is not a palindrome".format(num))
+```
+
+## Output
+<img width="742" height="141" alt="image" src="https://github.com/user-attachments/assets/79dbc381-7276-4c13-b982-4a1c54a57df1" />
+
+## Result
+Thus, the program has been successfully executed.
